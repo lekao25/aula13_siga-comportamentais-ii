@@ -77,3 +77,8 @@ Conforme a ficha de atividade prática: identificadores em português, um arquiv
 
 **1 - Localizar a inversão:**
 A inversão ocorre na classe `DeclaracaoVinculo`, onde a instrução `LogAcademico.registrar("DECLARACAO", aluno);` é executada antes da validação `if (!aluno.isRegular())`. A consequência observável é que, ao tentar emitir o documento para um aluno irregular, o sistema lança uma exceção impedindo a emissão, mas o aluno já deixou um rastro indevido gravado no log.
+**5 - Medir o ganho (Estado Concluída):**
+Para acrescentar o estado `Concluida`, foi necessário tocar em apenas 2 arquivos da lógica (criamos a classe `Concluida.java` e alteramos a classe `Confirmada.java` para oferecer a transição, além de adicionar a assinatura na interface e contexto).
+
+**A linha que distingue o State do Strategy:**
+A linha `matricula.mudarPara(new Confirmada());` demonstra a diferença central: no padrão **State**, os próprios estados conhecem as regras de negócio e executam as transições ativamente, alterando o estado atual do contexto. Já no padrão **Strategy**, o objeto injetado apenas processa um algoritmo ou devolve um valor, mas jamais decide substituir a política raiz configurada no contexto.
