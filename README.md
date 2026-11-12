@@ -1,3 +1,5 @@
+--release 17 -encoding UTF-8 -d bin src/siga/*.java
+java -cp bin siga.Main
 # SIGA — Atividade de padrões comportamentais II: Template Method e State (código inicial)
 
 **Técnicas de Programação II (TP2) · Aula 13** — CST em Desenvolvimento de Software Multiplataforma · Fatec de Porto Ferreira
